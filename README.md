@@ -2,6 +2,8 @@
 
 Queremos crear un servidor que, al recibir peticiones de un cliente, emite diferente respuestas. La idea general es que el servidor dispone de una "base de datos" con los colores requeridos para una aplicación
 
+[Vídeo demostrativo](https://oscarm.tinytake.com/df/1653a0b/thumbnail?type=attachments&version_no=0&file_version_no=0&thumbnail_size=preview)
+
 ## Requisito 1
 
 Si el usuario hace una petición al servidor, sin especificar ninguna ruta, este debe contestar con una respuesta del tipo HTML; dando la bienvenida al servidor.
