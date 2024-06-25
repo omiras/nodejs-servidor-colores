@@ -27,6 +27,8 @@ const server = http.createServer((req, res) => {
     // Nos quedamos con la propiedad url del objeto req (request)
     // Para obtener la URL del objeto request usaremos el operador de desestructuración de objetos
     const { url } = req;
+    // Especificar que vamos a enviar un html
+    // Tenemos que especificar que la codificación es utf-8
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
 
     if (url.startsWith("/color")) {
@@ -43,8 +45,7 @@ const server = http.createServer((req, res) => {
 
     } else {
 
-        // Especificar que vamos a enviar un html
-        // Tenemos que especificar que la codificación es utf-8
+        
 
 
         res.write('<h1>Bienvenido al servidor de colores</h1>');
