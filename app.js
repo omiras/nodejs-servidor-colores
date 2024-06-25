@@ -30,6 +30,9 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
 
     if (url.startsWith("/color")) {
+
+        // Iteración 3: Comprobar si me han pasado una queryString o no. En caso de que si: obtener el color en función del ?variant=Vermillion. En caso contrario obtener un color aleatório
+
         // obtener un color aleatório
         const indexRandomColor = Math.floor(Math.random() * colors.length);
         const randomColor = colors[indexRandomColor];
