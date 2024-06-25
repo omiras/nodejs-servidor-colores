@@ -1,5 +1,5 @@
 const http = require('http');
-const url = require('url');
+const querystring = require('querystring');
 
 const colors = [
     { variant: "Vermillion", hex: "#2E191B" },
@@ -20,11 +20,10 @@ const colors = [
 ];
 
 const app = http.createServer((req, res) => {
-    const parsedUrl = url.parse(req.url, true);
-    const pathname = parsedUrl.pathname;
+    const [path, queryString] = req.url.split('?');
 
-    if (pathname === '/color') {
-        const query = parsedUrl.query;
+    if (path === '/color') {
+        const query = querystring.parse(queryString);
         let resultColor;
 
         if (query.variant) {
