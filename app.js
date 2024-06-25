@@ -15,29 +15,45 @@ const colors = [
     { variant: "Maroon", hex: "#800000" },
     { variant: "Coral", hex: "#FF7F50" }
 ];
-//import built-in module http to create a server
+
+
+
+// Módulo interno
 const http = require('http');
-//import built-in module queryString to work with the query string
-const querystring = ('querystring');
 
-/** To create a server, invoke the .createServer method of the http object. This function takes a callback function as a parameter, which will be executed each time the server receives a request. The callback has 2 parameters - request and response */
-
+// Creamos servidor y lo asigno a una variable
 const server = http.createServer((req, res) => {
-    res.setHeader('Content-Type', 'text/html');
 
-    if (req.url.startsWith('/color')) {
-        let color = colors[Math.floor(Math.random() * colors.length)];
-        res.write(`<h1 style="color: ${color.hex};">${color.hex}</h1>`)
+    // Nos quedamos con la propiedad url del objeto req (request)
+    // Para obtener la URL del objeto request usaremos el operador de desestructuración de objetos
+    const { url } = req;
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+
+    if (url.startsWith("/color")) {
+
+        // Iteración 3: Comprobar si me han pasado una queryString o no. En caso de que si: obtener el color en función del ?variant=Vermillion. En caso contrario obtener un color aleatório
+
+        // obtener un color aleatório
+        const indexRandomColor = Math.floor(Math.random() * colors.length);
+        const randomColor = colors[indexRandomColor];
+
+        // me quedo con la propiedad .hex del color
+        const { hex } = randomColor;
+        res.end(`<p style="color: ${hex}">${hex}</p>`)
+
+    } else {
+
+        // Especificar que vamos a enviar un html
+        // Tenemos que especificar que la codificación es utf-8
+
+
+        res.write('<h1>Bienvenido al servidor de colores</h1>');
+        res.write('<p>Haz una petición a /color para obtener un color aleatório</p>');
+        res.end();
     }
-   else { console.log('He recibido una petición.');
-    res.write('<h1>Bienvenido a la web de los colores!</h1>');
-    res.end();
-}
-})
+});
 
-//Start listening to the server, this is the connection with the client
-
-server.listen(3000, ()=> {
-    // la función de callback se ejecuta cuando NodeJS levanta (poner en funcionamiento) el servidor
-    console.log("El servidor está corriendo.");
-})
+// levantamos el servidor en el puerto 3000
+server.listen(3000, () => {
+    console.log('Server running in port 3000');
+});
