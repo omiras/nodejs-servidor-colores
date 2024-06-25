@@ -28,7 +28,7 @@ Ejemplo:
 
 Para la petición:
 ```
-http://localhost:3000/color?variant=red
+http://localhost:3000/color?variant=Vermillion
 ```
 
 Devolverá siempre el primer color del array.
@@ -36,5 +36,7 @@ Devolverá siempre el primer color del array.
 ```
 #2E191B
 ```
+
+En caso de que la variante de color no exista entonces devolverá un color **al azar**
 
 
