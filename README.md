@@ -37,6 +37,3 @@ Devolverá siempre el primer color del array.
 
 ## BONUS
 
-Descarga el programa encargado de cambiar el color del fondo de la página Web del cliente - [Enlace](https://jsbeginners.com/change-background-color-project/)
-
-Haz los cambios necesarios para que, en vez de cambiar a un color aleatorio cada vez que pulsamos el botón 'Click Me!'; haga una petición GET a nuestro servidor que acabamos de crear y obtenga un color aleatorio.

@@ -4,12 +4,9 @@ const url = require('url');
 
 const app = http.createServer((req, res) => {
 
-    // Sin esta configuración, no podríamos acceptar peticiones desde otro servidor y/o puerto. Esta configuración dice: "Acepta peticiones de otro script; venga de donde venga"
-
-    res.setHeader('Access-Control-Allow-Origin', '*');
 
     if (req.url.includes('/color')) {
-      
+
         // hay parámetros de QueryString
         const adr = req.host + req.url;
         const q = url.parse(adr, true)
@@ -17,7 +14,7 @@ const app = http.createServer((req, res) => {
         let resultColor;
 
         res.writeHead(200, { 'Content-Type': 'text/plain' })
-      
+
         switch (q.query.variant) {
             case 'red':
                 resultColor = colors[0]
@@ -29,7 +26,7 @@ const app = http.createServer((req, res) => {
                 resultColor = colors[2];
                 break;
             default:
-                resultColor = colors[Math.floor(Math.random()*colors.length)];
+                resultColor = colors[Math.floor(Math.random() * colors.length)];
         }
 
         res.write(resultColor)
