@@ -25,9 +25,14 @@ const querystring = ('querystring');
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html');
 
-    console.log('He recibido una petición.');
+    if (req.url.startsWith('/color')) {
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        res.write(`<h1 style="color: ${color.hex};">${color.hex}</h1>`)
+    }
+   else { console.log('He recibido una petición.');
     res.write('<h1>Bienvenido a la web de los colores!</h1>');
     res.end();
+}
 })
 
 //Start listening to the server, this is the connection with the client
