@@ -34,8 +34,8 @@ const app = http.createServer((req, res) => {
             resultColor = colors[Math.floor(Math.random() * colors.length)];
         }
 
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end(resultColor.hex);
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.end(`<div style="color:${resultColor.hex} ">${resultColor.hex}</div>`);
     } else {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         res.write(`
