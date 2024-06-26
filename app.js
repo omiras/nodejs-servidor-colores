@@ -34,6 +34,12 @@ const http = require('http');
 const fs = require('fs');
 const querystring = require('querystring');
 
+//cargar lodash, al estar instalado, se puede importar como si fuera un módulo interno
+
+const _ = require('lodash');
+console.log('de lodash: ',_.sample(colors))
+const randomColor = _.sample(colors);
+
 // Creamos servidor y lo asigno a una variable
 const server = http.createServer((req, res) => {
 
