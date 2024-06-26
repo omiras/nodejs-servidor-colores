@@ -21,6 +21,12 @@ const colors = [
 // Módulo interno
 const http = require('http');
 const fs = require('fs');
+const querystring = require('querystring');
+
+// cargar el módulo de terceros lodash
+// Al estar instalado en node_modules podemos importarlo como si fuera un módulo interno
+const _ = require('lodash');
+
 
 // Creamos servidor y lo asigno a una variable
 const server = http.createServer((req, res) => {
@@ -30,13 +36,40 @@ const server = http.createServer((req, res) => {
     const { url } = req;
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
 
-    if (url == "/color") {
+    // Caso que tiene ?variant
+    if (url.startsWith("/color?")) {
+        // Usamos el operador de desestructuración para asignar a la variable path la primera posición del array y a la variable queryString la segunda posición del array
+        const [path, queryString] = req.url.split('?');
+        const qs = querystring.parse(queryString);
+        console.log("🚀 ~ file: app.js:39 ~ server ~ qs:", qs);
+
+        // 1. Utilizar el método de array adecuado para buscar la variante del color en el array 'colors'
+        // colors.find...
+        const chosenColor = colors.find(c => c.variant == qs.variant);
+        console.log("🚀 ~ file: app.js:44 ~ server ~ chosenColor:", chosenColor)
+        // 2. Si encuentra el color, devolverlo tal y cómo lo hacemos aquí
+        if (chosenColor) {
+            res.end(`<p style="color: ${chosenColor.hex}">${chosenColor.hex}</p>`);
+        }
+        else {
+            // el color elegido no existe. Elegimos uno al azar e informamos al usuario
+            const randomColor = _.sample(colors);
+            res.write(`El color <strong>${qs.variant}</strong>  elegido no EXISTE. Hemos obtenido un color al azar`);
+            res.end(`<p style="color: ${randomColor.hex}">${randomColor.hex}</p>`);
+        }
+        // 3. Si NO encuentra el color, mandarle uno al azar.  Mandarle un mensaje diciendo que la variante de color elegida NO EXiste. Opcionalmente podéis enviarle el array de colores que puede usar . Tienes que al final enviar un string. <ul><li>Vermillion</li></ul>
+
+        // Si usas un map para hacer el bonus
+        // 1. hacer un forEach y para cada elemento del array puedes hacer un res.write()
+        // 2. Otra forma seria crear un array de string con <li>, y luego jutnarlos todos con un método de array que te permite transformar un array en un string
+    }
+
+    else if (url == "/color") {
 
         // Iteración 3: Comprobar si me han pasado una queryString o no. En caso de que si: obtener el color en función del ?variant=Vermillion. En caso contrario obtener un color aleatório
 
         // obtener un color aleatório
-        const indexRandomColor = Math.floor(Math.random() * colors.length);
-        const randomColor = colors[indexRandomColor];
+        const randomColor = _.sample(colors);
 
         // me quedo con la propiedad .hex del color
         const { hex } = randomColor;
