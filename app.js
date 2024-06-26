@@ -20,6 +20,7 @@ const colors = [
 
 // Módulo interno
 const http = require('http');
+const fs = require('fs');
 
 // Creamos servidor y lo asigno a una variable
 const server = http.createServer((req, res) => {
@@ -29,7 +30,7 @@ const server = http.createServer((req, res) => {
     const { url } = req;
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
 
-    if (url.startsWith("/color")) {
+    if (url == "/color") {
 
         // Iteración 3: Comprobar si me han pasado una queryString o no. En caso de que si: obtener el color en función del ?variant=Vermillion. En caso contrario obtener un color aleatório
 
@@ -39,9 +40,10 @@ const server = http.createServer((req, res) => {
 
         // me quedo con la propiedad .hex del color
         const { hex } = randomColor;
+        res.statusCode = 200;
         res.end(`<p style="color: ${hex}">${hex}</p>`)
 
-    } else {
+    } else if (url == "/") {
 
         // Especificar que vamos a enviar un html
         // Tenemos que especificar que la codificación es utf-8
@@ -50,6 +52,13 @@ const server = http.createServer((req, res) => {
         res.write('<h1>Bienvenido al servidor de colores</h1>');
         res.write('<p>Haz una petición a /color para obtener un color aleatório</p>');
         res.end();
+    } else {
+        // el recurso/endpoint/ruta que intentas acceder no existe
+        res.statusCode = 404;
+        // le enviamos el fichero 404.html
+        // Voy a leer el fichero con un método síncrono
+        const htmlContent = fs.readFileSync("./404.html");
+        res.end(htmlContent);
     }
 });
 
