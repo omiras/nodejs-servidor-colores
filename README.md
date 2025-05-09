@@ -39,4 +39,37 @@ Devolverá siempre el primer color del array.
 
 En caso de que la variante de color no exista entonces devolverá un color **al azar**
 
+## Requisito 4
+
+Tenemos que informar de alguna manera al usuario de qué colores puede pedirnos. ¿Cómo va a saber que puede hacer consultas para el color _Vermillion_ o el _Coral_?
+
+Modifica tu servidor para que cuando el usuario haga una petición a la siguiente ruta:
+
+```
+http://localhost:3000/get-colors
+```
+
+Le devolverá una lista en HTML con todos los colores disponibles.
+
+**Pista**: El método de array _map_ te puede ayudar a generar una lista en HTML  de forma sencilla a partir del array de colores
+
+## Requisito 5
+
+Fíjate en el fichero ubicado en **files/animals.json**. Dispone de varios animales relacionados con una variante de color. 
+
+Modifica tu servidor para que cuando el usario haga una petición a la siguiente ruta:
+
+
+```
+http://localhost:3000/get-animal?variant=Vermillion
+```
+
+Devuelva una imagen en HTML. La URL de la imagen es un amimal relacionado con ese color de lal parámetro _variant_. 
+
+**Pista**: Debes cargar el fichero JSON. Además, piensa que método de array te permite _buscar_ facilmente un elemento dentro de un array.
+
+
+
+
+
 

@@ -1,0 +1,92 @@
+[
+  {
+    "variant": "Vermillion",
+    "hex": "#2E191B",
+    "animal": "Red Panda",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=212196&picture=red-panda"
+  },
+  {
+    "variant": "Forest",
+    "hex": "#0B6623",
+    "animal": "Jaguar",
+    "urlImage": "https://pixabay.com/images/search/animal%20jaguar/"
+  },
+  {
+    "variant": "Navy",
+    "hex": "#000080",
+    "animal": "Blue Whale",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=127605&picture=blue-whale"
+  },
+  {
+    "variant": "Crimson",
+    "hex": "#DC143C",
+    "animal": "Scarlet Macaw",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=14936&picture=scarlet-macaw"
+  },
+  {
+    "variant": "Sky Blue",
+    "hex": "#87CEEB",
+    "animal": "Kingfisher",
+    "urlImage": "https://pixabay.com/images/search/kingfisher/"
+  },
+  {
+    "variant": "Lime",
+    "hex": "#00FF00",
+    "animal": "Tree Frog",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=68881&picture=green-tree-frog"
+  },
+  {
+    "variant": "Gold",
+    "hex": "#FFD700",
+    "animal": "Golden Retriever",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=35696&picture=golden-retriever-dog"
+  },
+  {
+    "variant": "Lavender",
+    "hex": "#E6E6FA",
+    "animal": "Lilac-Breasted Roller",
+    "urlImage": "https://www.rawpixel.com/image/6028249/photo-image-public-domain-tree-nature"
+  },
+  {
+    "variant": "Tangerine",
+    "hex": "#F28500",
+    "animal": "Tiger",
+    "urlImage": "https://www.publicdomainpictures.net/en/hledej.php?hleda=tiger&page=0&seradit=recommended"
+  },
+  {
+    "variant": "Magenta",
+    "hex": "#FF00FF",
+    "animal": "Axolotl",
+    "urlImage": "https://commons.wikimedia.org/wiki/File:Axolotl-2193331_1280.webp"
+  },
+  {
+    "variant": "Cyan",
+    "hex": "#00FFFF",
+    "animal": "Parrotfish",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=419140&picture=fish-parrotfish-vintage-art"
+  },
+  {
+    "variant": "Olive",
+    "hex": "#808000",
+    "animal": "Chameleon",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=10053&picture=chameleon"
+  },
+  {
+    "variant": "Teal",
+    "hex": "#008080",
+    "animal": "Peacock",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=5124&picture=peacock"
+  },
+  {
+    "variant": "Maroon",
+    "hex": "#800000",
+    "animal": "Bison",
+    "urlImage": "https://image.shutterstock.com/image-photo/portrait-male-bison-yellowstone-national-250nw-2505047499.jpg"
+  },
+  {
+    "variant": "Coral",
+    "hex": "#FF7F50",
+    "animal": "Clownfish",
+    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=12249&picture=clownfish"
+  }
+]
