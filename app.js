@@ -25,19 +25,29 @@ const server = http.createServer((req, res) => {
     // Analizar la ruta de la petición el cliente
     const parsedUrl = url.parse(req.url, true);
     const path = parsedUrl.pathname; // obtiene la ruta URL
-    
 
-    // Encabezado de la resputa HTTP. 200--> OK
-    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-    res.write(`
+    if (path == "/color") {
+
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.write(`<p style="color:${randomColor.hex}">${randomColor.hex}</p>`);
+        res.end();
+
+    } else {
+
+        // Encabezado de la resputa HTTP. 200--> OK
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.write(`
             <h1>Bienvenidos a la base de datos de colores de NetMind!</h1>
             <p>Para obtener un color aleatorio, haz una petición GET al endpoint <strong>/color</strong>.</p>
             <p>Para obtener un color específico, usa el parámetro de consulta <strong>?variant=[color]</strong> (por ejemplo, <strong>?variant=Vermillion</strong>).</p>
             <p>Para obtener la lista de colores disponibles, haz una petición GET al endpoint <strong>/get-colors</strong>.</p>
             <p>Para obtener un animal relacionado con el color, haz una petición GET al endpoint <strong>/get-animal</strong> y usa el parámetro de consulta <strong>?variant=[color]</strong> (por ejemplo, <strong>?variant=Vermillion</strong>).</p>
         `);
-    res.end();
-
+        res.end();
+    }
 });
 
 
