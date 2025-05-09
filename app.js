@@ -36,6 +36,31 @@ const app = http.createServer((req, res) => {
 
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(`<div style="color:${resultColor.hex} ">${resultColor.hex}</div>`);
+    } else if (path == "/get-colors") {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.write(`
+                <h1>Colores Disponibles</h1>
+                <ul>
+                   ${colors.map(c => `<li>${c.variant}</li>`).join("")}
+                </ul>
+                `)
+        res.end();
+
+    } else if (path == "/get-animal") {
+        const query = querystring.parse(queryString);
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+
+        // Acces to file files/animals.json and retrieve the animal related with the variant parameter
+        const jsonAnimals = require('./files/animals.json');
+        const animal = jsonAnimals.find(a => a.variant.toLowerCase() === query.variant.toLowerCase());
+        if (animal) {
+            res.write(`<h1>${animal.animalName}</h1>`);
+            res.write(`<img width="300" src="${animal.urlImage}" alt="${animal.animalName}">`);
+        } else {
+            res.write("<h1>Animal no encontrado</h1>");
+        }
+
+        res.end();
     } else {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
         res.write(`
