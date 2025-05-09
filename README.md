@@ -51,7 +51,7 @@ http://localhost:3000/get-colors
 
 Le devolverá una lista en HTML con todos los colores disponibles.
 
-**Pista**: El método de array _map_ te puede ayudar a generar una lista en HTML  de forma sencilla a partir del array de colores
+**Pista**: El método de array _forEach_ o _map_ te puede ayudar a generar una lista en HTML  de forma sencilla a partir del array de colores
 
 Resultado esperado:
 
