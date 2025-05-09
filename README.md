@@ -64,7 +64,7 @@ Modifica tu servidor para que cuando el usario haga una petición a la siguiente
 http://localhost:3000/get-animal?variant=Vermillion
 ```
 
-Devuelva una imagen en HTML. La URL de la imagen es un amimal relacionado con ese color de lal parámetro _variant_. 
+Devuelva una imagen en HTML. La URL de la imagen es un amimal relacionado con ese color del parámetro _variant_. 
 
 **Pista**: Debes cargar el fichero JSON. Además, piensa que método de array te permite _buscar_ facilmente un elemento dentro de un array.
 
