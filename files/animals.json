@@ -2,91 +2,91 @@
   {
     "variant": "Vermillion",
     "hex": "#2E191B",
-    "animal": "Red Panda",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=212196&picture=red-panda"
+    "animalName": "Red Panda",
+    "urlImage": "https://www.publicdomainpictures.net/pictures/220000/velka/red-panda-1493862117eOV.jpg"
   },
   {
     "variant": "Forest",
     "hex": "#0B6623",
-    "animal": "Jaguar",
-    "urlImage": "https://pixabay.com/images/search/animal%20jaguar/"
+    "animalName": "Jaguar",
+    "urlImage": "https://media.istockphoto.com/id/546803214/es/foto/jaguar.jpg?s=2048x2048&w=is&k=20&c=o2jNuMdH9XgfgTsP5opp9gCTeuNh9aQtzpcklVU2Ugw="
   },
   {
     "variant": "Navy",
     "hex": "#000080",
-    "animal": "Blue Whale",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=127605&picture=blue-whale"
+    "animalName": "Blue Whale",
+    "urlImage": "https://as1.ftcdn.net/jpg/00/96/63/80/220_F_96638041_y68ia7yVfmCecQSqlsK7fh3vnpjjucBi.jpg"
   },
   {
     "variant": "Crimson",
     "hex": "#DC143C",
-    "animal": "Scarlet Macaw",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=14936&picture=scarlet-macaw"
+    "animalName": "Scarlet Macaw",
+    "urlImage": "https://as1.ftcdn.net/jpg/00/54/80/12/220_F_54801234_T7hfDavN91icxYiW3DFIKlmwO3eBdGOx.jpg"
   },
   {
     "variant": "Sky Blue",
     "hex": "#87CEEB",
-    "animal": "Kingfisher",
-    "urlImage": "https://pixabay.com/images/search/kingfisher/"
+    "animalName": "Kingfisher",
+    "urlImage": "https://media.istockphoto.com/id/182229801/es/foto/mart%C3%ADn-pescador.jpg?s=2048x2048&w=is&k=20&c=tXgGtF_64V_zDENL-T9rGaK-GK9MImPaPWaMaYXD9qs="
   },
   {
     "variant": "Lime",
     "hex": "#00FF00",
-    "animal": "Tree Frog",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=68881&picture=green-tree-frog"
+    "animalName": "Tree Frog",
+    "urlImage": "https://www.publicdomainpictures.net/pictures/70000/velka/green-tree-frog.jpg"
   },
   {
     "variant": "Gold",
     "hex": "#FFD700",
-    "animal": "Golden Retriever",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=35696&picture=golden-retriever-dog"
+    "animalName": "Golden Retriever",
+    "urlImage": "https://www.publicdomainpictures.net/pictures/40000/velka/golden-retriever-dog-1364426710r9x.jpg"
   },
   {
     "variant": "Lavender",
     "hex": "#E6E6FA",
-    "animal": "Lilac-Breasted Roller",
-    "urlImage": "https://www.rawpixel.com/image/6028249/photo-image-public-domain-tree-nature"
+    "animalName": "Lilac-Breasted Roller",
+    "urlImage": "https://www.color-meanings.com/wp-content/uploads/2022/09/Violet-Backed-Starling-1024x683.jpeg"
   },
   {
     "variant": "Tangerine",
     "hex": "#F28500",
-    "animal": "Tiger",
-    "urlImage": "https://www.publicdomainpictures.net/en/hledej.php?hleda=tiger&page=0&seradit=recommended"
+    "animalName": "Tiger",
+    "urlImage": "https://as1.ftcdn.net/jpg/03/83/46/48/220_F_383464809_VAyaM0bON9NZT1UCPXghp8GhHx56QKqm.jpg"
   },
   {
     "variant": "Magenta",
     "hex": "#FF00FF",
-    "animal": "Axolotl",
-    "urlImage": "https://commons.wikimedia.org/wiki/File:Axolotl-2193331_1280.webp"
+    "animalName": "Axolotl",
+    "urlImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Axolotl-2193331_1280.webp/1200px-Axolotl-2193331_1280.webp.png?20220210051554"
   },
   {
     "variant": "Cyan",
     "hex": "#00FFFF",
-    "animal": "Parrotfish",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=419140&picture=fish-parrotfish-vintage-art"
+    "animalName": "Parrotfish",
+    "urlImage": "https://www.publicdomainpictures.net/pictures/420000/velka/fish-parrotfish-vintage-art.png"
   },
   {
     "variant": "Olive",
     "hex": "#808000",
-    "animal": "Chameleon",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=10053&picture=chameleon"
+    "animalName": "Chameleon",
+    "urlImage": "https://www.publicdomainpictures.net/pictures/20000/velka/chameleon-69771288639853lMKs.jpg"
   },
   {
     "variant": "Teal",
     "hex": "#008080",
-    "animal": "Peacock",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=5124&picture=peacock"
+    "animalName": "Peacock",
+    "urlImage": "https://www.publicdomainpictures.net/pictures/10000/velka/2085-1263744667rTrU.jpg"
   },
   {
     "variant": "Maroon",
     "hex": "#800000",
-    "animal": "Bison",
+    "animalName": "Bison",
     "urlImage": "https://image.shutterstock.com/image-photo/portrait-male-bison-yellowstone-national-250nw-2505047499.jpg"
   },
   {
     "variant": "Coral",
     "hex": "#FF7F50",
-    "animal": "Clownfish",
-    "urlImage": "https://www.publicdomainpictures.net/en/view-image.php?image=12249&picture=clownfish"
+    "animalName": "Clownfish",
+    "urlImage": "https://www.publicdomainpictures.net/pictures/20000/velka/clownfish-11299071692zpB.jpg"
   }
 ]

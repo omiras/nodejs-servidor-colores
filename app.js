@@ -67,6 +67,8 @@ const app = http.createServer((req, res) => {
             <h1>Bienvenidos a la base de datos de colores de NetMind!</h1>
             <p>Para obtener un color aleatorio, haz una petición GET al endpoint <strong>/color</strong>.</p>
             <p>Para obtener un color específico, usa el parámetro de consulta <strong>?variant=[color]</strong> (por ejemplo, <strong>?variant=Vermillion</strong>).</p>
+            <p>Para obtener la lista de colores disponibles, haz una petición GET al endpoint <strong>/get-colors</strong>.</p>
+            <p>Para obtener un animal relacionado con el color, haz una petición GET al endpoint <strong>/get-animal</strong> y usa el parámetro de consulta <strong>?variant=[color]</strong> (por ejemplo, <strong>?variant=Vermillion</strong>).</p>
         `);
         res.end();
     }
