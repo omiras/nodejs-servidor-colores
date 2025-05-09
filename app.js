@@ -1,3 +1,7 @@
+const http = require('http');
+const url = require('url');
+
+
 const colors = [
     { variant: "Vermillion", hex: "#2E191B" },
     { variant: "Forest", hex: "#0B6623" },
@@ -15,3 +19,29 @@ const colors = [
     { variant: "Maroon", hex: "#800000" },
     { variant: "Coral", hex: "#FF7F50" }
 ];
+
+const server = http.createServer((req, res) => {
+
+    // Analizar la ruta de la petición el cliente
+    const parsedUrl = url.parse(req.url, true);
+    const path = parsedUrl.pathname; // obtiene la ruta URL
+    
+
+    // Encabezado de la resputa HTTP. 200--> OK
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.write(`
+            <h1>Bienvenidos a la base de datos de colores de NetMind!</h1>
+            <p>Para obtener un color aleatorio, haz una petición GET al endpoint <strong>/color</strong>.</p>
+            <p>Para obtener un color específico, usa el parámetro de consulta <strong>?variant=[color]</strong> (por ejemplo, <strong>?variant=Vermillion</strong>).</p>
+            <p>Para obtener la lista de colores disponibles, haz una petición GET al endpoint <strong>/get-colors</strong>.</p>
+            <p>Para obtener un animal relacionado con el color, haz una petición GET al endpoint <strong>/get-animal</strong> y usa el parámetro de consulta <strong>?variant=[color]</strong> (por ejemplo, <strong>?variant=Vermillion</strong>).</p>
+        `);
+    res.end();
+
+});
+
+
+
+server.listen(3000, () => {
+    console.log("Escuchando en el puerto 3000");
+});
