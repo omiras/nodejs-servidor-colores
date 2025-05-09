@@ -53,6 +53,10 @@ Le devolverá una lista en HTML con todos los colores disponibles.
 
 **Pista**: El método de array _map_ te puede ayudar a generar una lista en HTML  de forma sencilla a partir del array de colores
 
+Resultado esperado:
+
+![](https://oscarm.tinytake.com/media/175fe21?filename=1746780557008_TinyTake09-05-2025-10-49-03_638823773560585366.png&sub_type=thumbnail_preview&type=attachment&width=1200&height=517)
+
 ## Requisito 5
 
 Fíjate en el fichero ubicado en **files/animals.json**. Dispone de varios animales relacionados con una variante de color. 
@@ -68,7 +72,9 @@ Devuelva una imagen en HTML. La URL de la imagen es un amimal relacionado con es
 
 **Pista**: Debes cargar el fichero JSON. Además, piensa que método de array te permite _buscar_ facilmente un elemento dentro de un array.
 
+Resultado esperado: 
 
+![](https://oscarm.tinytake.com/media/175fe8b?filename=1746781731145_TinyTake09-05-2025-11-08-35_638823785299595171.png&sub_type=thumbnail_preview&type=attachment&width=800&height=589)
 
 
 
