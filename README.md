@@ -57,6 +57,11 @@ Resultado esperado:
 
 ![](https://oscarm.tinytake.com/media/175fe21?filename=1746780557008_TinyTake09-05-2025-10-49-03_638823773560585366.png&sub_type=thumbnail_preview&type=attachment&width=1200&height=517)
 
+**Bonus**: Haz que cada elemento de la lista sea clicable. Es decir, que si hago clic en "Gold" hará una petición a 
+```
+http://localhost:3000/color?variant=Gold
+```
+
 ## Requisito 5
 
 Fíjate en el fichero ubicado en **files/animals.json**. Dispone de varios animales relacionados con una variante de color. 
